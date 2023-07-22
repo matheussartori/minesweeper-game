@@ -1,5 +1,7 @@
 import readline from 'readline'
 
+import chalk from 'chalk'
+
 interface TerminalDisplayParams {
   cols: number
   rows: number
@@ -7,9 +9,9 @@ interface TerminalDisplayParams {
 }
 
 export function displayTerminalBoard ({ cols, rows, fog }: TerminalDisplayParams): void {
-  console.log('  ' + [...Array(cols).keys()].join(' '))
+  console.log('  ' + chalk.magenta([...Array(cols).keys()].join(' ')))
   for (let row = 0; row < rows; row++) {
-    console.log(`${row} ${fog[row].join(' ')}`)
+    console.log(`${chalk.blue(row)} ${fog[row].join(' ')}`)
   }
 }
 
