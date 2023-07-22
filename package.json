@@ -7,7 +7,8 @@
     "start": "node ./dist/main.js",
     "build": "npx rimraf dist; npx tsup src/*",
     "prepare": "npx husky install",
-    "commitlint": "npx commitlint --edit"
+    "commitlint": "npx commitlint --edit",
+    "lint:staged": "npx lint-staged"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +25,7 @@
     "eslint-plugin-n": "^16.0.1",
     "eslint-plugin-promise": "^6.1.1",
     "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "rimraf": "^5.0.1",
     "tsup": "^7.1.0",
     "tsx": "^3.12.7",
