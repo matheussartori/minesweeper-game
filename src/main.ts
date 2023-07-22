@@ -6,17 +6,17 @@ const game = new Game()
 
 async function main (): Promise<void> {
   while (true) {
-    displayTerminalBoard(game.displayBoard())
+    displayTerminalBoard(game.getBoardState())
 
-    const row = await getValidInput(`Enter the row number (0-${game.gameData().rows - 1}): `, game.gameData().rows)
-    const col = await getValidInput(`Enter the col number (0-${game.gameData().cols - 1}): `, game.gameData().cols)
+    const row = await getValidInput(`Enter the row number (0-${game.getGameState().rows - 1}): `, game.getGameState().rows)
+    const col = await getValidInput(`Enter the col number (0-${game.getGameState().cols - 1}): `, game.getGameState().cols)
 
     console.clear()
 
     const gameEnded = game.playRound(row, col)
 
     if (gameEnded) {
-      displayTerminalBoard(game.displayBoard())
+      displayTerminalBoard(game.getBoardState())
       break
     }
   }

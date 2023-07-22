@@ -5,12 +5,16 @@
   "scripts": {
     "dev": "npx tsx ./src/main.ts",
     "start": "node ./dist/main.js",
-    "build": "npx rimraf dist; npx tsup src/*"
+    "build": "npx rimraf dist; npx tsup src/*",
+    "prepare": "npx husky install",
+    "commitlint": "npx commitlint --edit"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^17.6.7",
+    "@commitlint/config-conventional": "^17.6.7",
     "@types/node": "^18.17.0",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "copyfiles": "^2.4.1",
@@ -19,6 +23,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^16.0.1",
     "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.3",
     "rimraf": "^5.0.1",
     "tsup": "^7.1.0",
     "tsx": "^3.12.7",

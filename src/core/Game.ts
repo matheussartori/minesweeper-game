@@ -13,15 +13,15 @@ export class Game {
 
   playRound (row: number, col: number): boolean {
     const gameEnded = this.game.revealCell(row, col)
-    this.game.getBoardState()
-    return gameEnded || false
+
+    return gameEnded
   }
 
-  gameData (): MinesweeperParams {
+  getGameState (): MinesweeperParams {
     return this.game.getMinesweeperState()
   }
 
-  displayBoard (): GetBoardParams {
+  getBoardState (): GetBoardParams {
     return this.game.getBoardState()
   }
 }
