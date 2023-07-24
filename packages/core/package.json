@@ -1,14 +1,11 @@
 {
   "name": "@matheussartori/minesweeper-game-core",
   "version": "1.0.0",
-  "description": "",
   "scripts": {
     "dev": "npx tsx ./src/main.ts",
     "start": "node ./dist/main.js",
     "build": "npx rimraf dist; npx tsup src/*"
   },
-  "keywords": [],
-  "author": "",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^8.45.0",

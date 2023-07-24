@@ -1,15 +1,11 @@
 {
   "name": "@matheussartori/minesweeper-game",
   "version": "1.0.0",
-  "description": "<p align=\"center\">   <img alt=\"Scheduler Design System\" height=\"200\" src=\"./.github/assets/game.png\" /> </p>",
-  "main": "index.js",
   "scripts": {
     "prepare": "npx husky install",
     "commitlint": "npx commitlint --edit"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^17.6.7",
     "@commitlint/config-conventional": "^17.6.7",
